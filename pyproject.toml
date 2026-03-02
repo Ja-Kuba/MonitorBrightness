@@ -1,10 +1,17 @@
 [project]
 name = "monitor-brightness"
 version = "0.1.0"
-description = "Add your description here"
+description = "Python CLI tool to control monitor brightness"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "screen-brightness-control>=0.27.0",
     "typer>=0.24.1",
 ]
+
+[project.scripts]
+mbright = "mbright.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
